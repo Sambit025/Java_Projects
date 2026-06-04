@@ -63,6 +63,54 @@ class Branch{
         this.IFSC = ifsc;
     }
 }
+class Account{
+    Branch br;
+    private String AccNo;
+    private String AccHolderName;
+    private double Balance;
+    Account(Branch br1,String AccNo,String AccHolderName,double Balance){
+        this.br = br1;
+        this.AccNo = AccNo;
+        this.AccHolderName = AccHolderName;
+        this.Balance = Balance;
+    }
+    String getBankName(){
+        return br.getBankName();
+    }
+    String getCenterAd(){
+        return br.getCenterAd();
+    }
+    String getBranchId(){
+        return br.getBranchId();
+    }
+    String getBranchAd(){
+        return br.getBranchAd();
+    }
+    String getIFSC(){
+        return br.getIFSC();
+    }
+
+    String getAccNo(){
+        return this.AccNo;
+    }
+    void setAccNo(String accno){
+        this.AccNo = accno;
+    }
+
+    String getAccHolderName(){
+        return this.AccHolderName;
+    }
+    void setAccHolderName(String name){
+        this.AccHolderName = name;
+    }
+
+    double getBalance(){
+        return this.Balance;
+    }
+    void setBalance(double balance){
+        this.Balance = balance;
+    }
+}
 public class Main {
     public static void main(String[] args) {
         Bank b1 = new Bank("SBI","Mumbai");
